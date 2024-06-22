@@ -6,43 +6,41 @@
  *  2. 更多说明参考此[文档](https://docs.tangly1024.com/article/notionnext-heo)
  */
 
-import CONFIG from './config'
-import { useEffect, useState } from 'react'
-import SideRight from './components/SideRight'
-import NavBar from './components/NavBar'
+import Comment from '@/components/Comment'
+import { AdSlot } from '@/components/GoogleAdsense'
+import { HashTag } from '@/components/HeroIcons'
+import LazyImage from '@/components/LazyImage'
+import replaceSearchResult from '@/components/Mark'
+import NotionPage from '@/components/NotionPage'
+import ShareBar from '@/components/ShareBar'
+import WWAds from '@/components/WWAds'
+import { siteConfig } from '@/lib/config'
 import { useGlobal } from '@/lib/global'
+import { loadWowJS } from '@/lib/plugins/wow'
+import { isBrowser } from '@/lib/utils'
+import { Transition } from '@headlessui/react'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
+import BlogPostArchive from './components/BlogPostArchive'
 import BlogPostListPage from './components/BlogPostListPage'
 import BlogPostListScroll from './components/BlogPostListScroll'
-import Hero from './components/Hero'
-import { useRouter } from 'next/router'
-import SearchNav from './components/SearchNav'
-import BlogPostArchive from './components/BlogPostArchive'
-import { ArticleLock } from './components/ArticleLock'
-import PostHeader from './components/PostHeader'
-import Comment from '@/components/Comment'
-import NotionPage from '@/components/NotionPage'
-import ArticleAdjacent from './components/ArticleAdjacent'
-import ArticleCopyright from './components/ArticleCopyright'
-import ArticleRecommend from './components/ArticleRecommend'
-import ShareBar from '@/components/ShareBar'
-import Link from 'next/link'
 import CategoryBar from './components/CategoryBar'
-import { Transition } from '@headlessui/react'
-import { Style } from './style'
-import { NoticeBar } from './components/NoticeBar'
-import { HashTag } from '@/components/HeroIcons'
-import LatestPostsGroup from './components/LatestPostsGroup'
 import FloatTocButton from './components/FloatTocButton'
-import replaceSearchResult from '@/components/Mark'
-import LazyImage from '@/components/LazyImage'
-import WWAds from '@/components/WWAds'
-import { AdSlot } from '@/components/GoogleAdsense'
-import { siteConfig } from '@/lib/config'
-import { isBrowser } from '@/lib/utils'
-import { loadWowJS } from '@/lib/plugins/wow'
-import YandexRTBAdvertisement from '@/components/YandexAds'
-import MailChimpForm from './components/MailChimpForm'
-import { Footer } from '../starter/components/Footer'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import Hero from './components/Hero'
+import LatestPostsGroup from './components/LatestPostsGroup'
+import { NoticeBar } from './components/NoticeBar'
+import PostAdjacent from './components/PostAdjacent'
+import PostCopyright from './components/PostCopyright'
+import PostHeader from './components/PostHeader'
+import { PostLock } from './components/PostLock'
+import PostRecommend from './components/PostRecommend'
+import SearchNav from './components/SearchNav'
+import SideRight from './components/SideRight'
+import CONFIG from './config'
+import { Style } from './style'
 
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
@@ -54,13 +52,13 @@ const LayoutBase = props => {
   const { children, slotTop, className } = props
 
   // 全屏模式下的最大宽度
-  const { fullWidth } = useGlobal()
+  const { fullWidth, isDarkMode } = useGlobal()
   const router = useRouter()
 
   const headerSlot = (
     <header>
       {/* 顶部导航 */}
-      <NavBar {...props} />
+      <Header {...props} />
 
       {/* 通知横幅 */}
       {router.route === '/' ? (
@@ -69,7 +67,7 @@ const LayoutBase = props => {
           <Hero {...props} />
         </>
       ) : null}
-      {fullWidth ? null : <PostHeader {...props} />}
+      {fullWidth ? null : <PostHeader {...props} isDarkMode={isDarkMode} />}
     </header>
   )
 
@@ -286,40 +284,39 @@ const LayoutSlug = props => {
   return (
     <>
       <div
-        className={`w-full ${fullWidth ? '' : 'xl:max-w-5xl'} ${hasCode ? 'xl:w-[73.15vw]' : ''} lg:hover:shadow lg:border rounded-2xl lg:px-2 lg:py-4 bg-white dark:bg-[#18171d] dark:border-gray-600 article`}>
-        {lock && <ArticleLock validPassword={validPassword} />}
+        className={`article h-full w-full ${fullWidth ? '' : 'xl:max-w-5xl'} ${hasCode ? 'xl:w-[73.15vw]' : ''} lg:hover:shadow lg:border rounded-2xl lg:px-2 lg:py-4 bg-white dark:bg-[#18171d] dark:border-gray-600`}>
+        {/* 文章锁 */}
+        {lock && <PostLock validPassword={validPassword} />}
 
         {!lock && (
-          <div
-            id='article-wrapper'
-            className='overflow-x-auto flex-grow mx-auto md:w-full md:px-5 '>
-            <article
-              itemScope
-              itemType='https://schema.org/Movie'
-              data-wow-delay='.2s'
-              className='wow fadeInUp subpixel-antialiased overflow-y-hidden'>
+          <div id='article-wrapper' className='mx-auto md:w-full md:px-5'>
+            {/* 文章主体 */}
+            <article itemScope itemType='https://schema.org/Movie'>
               {/* Notion文章主体 */}
-              <section className='px-5 justify-center mx-auto'>
+              <section
+                className='wow fadeInUp p-5 justify-center mx-auto'
+                data-wow-delay='.2s'>
                 <WWAds orientation='horizontal' className='w-full' />
                 {post && <NotionPage post={post} />}
                 <WWAds orientation='horizontal' className='w-full' />
               </section>
-              <YandexRTBAdvertisement />
+
+              {/* 上一篇\下一篇文章 */}
+              <PostAdjacent {...props} />
+
               {/* 分享 */}
               <ShareBar post={post} />
               {post?.type === 'Post' && (
                 <div className='px-5'>
                   {/* 版权 */}
-                  <ArticleCopyright {...props} />
-                  <MailChimpForm />
+                  <PostCopyright {...props} />
                   {/* 文章推荐 */}
-                  <ArticleRecommend {...props} />
-                  {/* 上一篇\下一篇文章 */}
-                  <ArticleAdjacent {...props} />
+                  <PostRecommend {...props} />
                 </div>
               )}
             </article>
 
+            {/* 评论区 */}
             {fullWidth ? null : (
               <div className={`${commentEnable && post ? '' : 'hidden'}`}>
                 <hr className='my-4 border-dashed' />
@@ -340,6 +337,7 @@ const LayoutSlug = props => {
           </div>
         )}
       </div>
+
       <FloatTocButton {...props} />
     </>
   )
@@ -384,12 +382,10 @@ const Layout404 = props => {
                 <h1 className='error-title font-extrabold md:text-9xl text-7xl dark:text-white'>
                   404
                 </h1>
-                <div className='dark:text-white'>
-                  Please try using the internal search to find articles
-                </div>
+                <div className='dark:text-white'>请尝试站内搜索寻找文章</div>
                 <Link href='/'>
                   <button className='bg-blue-500 py-2 px-4 text-white shadow rounded-lg hover:bg-blue-600 hover:shadow-md duration-200 transition-all'>
-                    Back to homepage
+                    回到主页
                   </button>
                 </Link>
               </div>
@@ -491,14 +487,14 @@ const LayoutTagIndex = props => {
 }
 
 export {
-  CONFIG as THEME_CONFIG,
-  LayoutBase,
-  LayoutIndex,
-  LayoutSearch,
-  LayoutArchive,
-  LayoutSlug,
   Layout404,
-  LayoutPostList,
+  LayoutArchive,
+  LayoutBase,
   LayoutCategoryIndex,
-  LayoutTagIndex
+  LayoutIndex,
+  LayoutPostList,
+  LayoutSearch,
+  LayoutSlug,
+  LayoutTagIndex,
+  CONFIG as THEME_CONFIG
 }

@@ -1,9 +1,17 @@
-import { Fragment, useImperativeHandle, useRef, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
 import DarkModeButton from '@/components/DarkModeButton'
+import { useGlobal } from '@/lib/global'
+import { Dialog, Transition } from '@headlessui/react'
 import Link from 'next/link'
-import TagGroups from './TagGroups'
+import { useRouter } from 'next/router'
+import {
+  Fragment,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState
+} from 'react'
 import { MenuListSide } from './MenuListSide'
+import TagGroups from './TagGroups'
 
 /**
  * 侧边抽屉
@@ -12,17 +20,28 @@ import { MenuListSide } from './MenuListSide'
 export default function SlideOver(props) {
   const { cRef, tagOptions } = props
   const [open, setOpen] = useState(false)
-
+  const { locale } = useGlobal()
+  const router = useRouter()
   /**
    * 函数组件暴露方法useImperativeHandle
-   */
+   **/
   useImperativeHandle(cRef, () => ({
     toggleSlideOvers: toggleSlideOvers
   }))
 
+  /**
+   * 开关侧拉抽屉
+   */
   const toggleSlideOvers = () => {
     setOpen(!open)
   }
+
+  /**
+   * 自动关闭抽屉
+   */
+  useEffect(() => {
+    setOpen(false)
+  }, [router])
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -72,24 +91,23 @@ export default function SlideOver(props) {
                   <div className='flex h-full flex-col overflow-y-scroll bg-white dark:bg-[#18171d] py-6 shadow-xl'>
                     <div className='relative mt-6 flex-1 flex-col space-y-3 px-4 sm:px-6 dark:text-white '>
                       <section className='space-y-2 flex flex-col'>
-                        <div>Featured</div>
                         {/* 切换深色模式 */}
                         <DarkModeBlockButton />
                       </section>
 
                       <section className='space-y-2 flex flex-col'>
-                        <div>Website</div>
+                        <div>{locale.COMMON.BLOG}</div>
                         {/* 导航按钮 */}
                         <div className='gap-2 grid grid-cols-2'>
-                          <Button title={'Homepage'} url={'/'} />
-                          <Button title={'About'} url={'/about'} />
+                          <Button title={'主页'} url={'/'} />
+                          <Button title={'关于'} url={'/about'} />
                         </div>
                         {/* 用户自定义菜单 */}
                         <MenuListSide {...props} />
                       </section>
 
                       <section className='space-y-2 flex flex-col'>
-                        <div>Tag</div>
+                        <div>{locale.COMMON.TAGS}</div>
                         <TagGroups tags={tagOptions} />
                       </section>
                     </div>
@@ -109,6 +127,8 @@ export default function SlideOver(props) {
  */
 function DarkModeBlockButton() {
   const darkModeRef = useRef()
+  const { isDarkMode, locale } = useGlobal()
+
   function handleChangeDarkMode() {
     darkModeRef?.current?.handleChangeDarkMode()
   }
@@ -119,7 +139,7 @@ function DarkModeBlockButton() {
         'group duration-200 hover:text-white hover:shadow-md hover:bg-blue-600 flex justify-between items-center px-2 py-2 border dark:border-gray-600 bg-white dark:bg-[#ff953e]  rounded-lg'
       }>
       <DarkModeButton cRef={darkModeRef} className='group-hover:text-white' />{' '}
-      Viewing Mode
+      {isDarkMode ? locale.MENU.LIGHT_MODE : locale.MENU.DARK_MODE}
     </button>
   )
 }
