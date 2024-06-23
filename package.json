@@ -1,16 +1,16 @@
 {
   "name": "notion-next",
   "version": "4.6.0",
-  "homepage": "https://github.com/tangly1024/NotionNext.git",
+  "homepage": "https://jiroop.com",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tangly1024/NotionNext.git"
+    "url": "https://github.com/jiroop-com/jiroop.com.git"
   },
   "author": {
-    "name": "tangly",
-    "email": "mail@tangly1024.com",
-    "url": "http://tangly1024.com"
+    "name": "jiroop",
+    "email": "jiroop.com@gmail.com",
+    "url": "http://jiroop.com"
   },
   "scripts": {
     "dev": "next dev",
