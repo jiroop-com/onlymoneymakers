@@ -53,7 +53,7 @@ export function InfoCard(props) {
           <div className='bg-indigo-400 p-2 rounded-full w-10 items-center flex justify-center transition-colors duration-200 dark:bg-yellow-500 dark:hover:bg-black hover:bg-white'>
             {siteConfig('HEO_INFO_CARD_URL', null, CONFIG) && (
               <Link href={siteConfig('HEO_INFO_CARD_URL', null, CONFIG)}>
-                <i className='fab fa-github text-xl' />
+                <i className='fas fa-heart' />
               </Link>
             )}
           </div>
@@ -101,7 +101,7 @@ function MoreButton() {
             'group-hover:stroke-black dark:group-hover:stroke-white w-6 h-6 transition-all duration-100'
           }
         />
-        <div className='font-bold'>了解更多</div>
+        <div className='font-bold'>Learn More</div>
       </div>
     </Link>
   )

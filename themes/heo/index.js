@@ -27,7 +27,6 @@ import BlogPostListPage from './components/BlogPostListPage'
 import BlogPostListScroll from './components/BlogPostListScroll'
 import CategoryBar from './components/CategoryBar'
 import FloatTocButton from './components/FloatTocButton'
-import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import LatestPostsGroup from './components/LatestPostsGroup'
@@ -41,6 +40,9 @@ import SearchNav from './components/SearchNav'
 import SideRight from './components/SideRight'
 import CONFIG from './config'
 import { Style } from './style'
+import YandexRTBAdvertisement from '@/components/YandexAds'
+import MailChimpForm from './components/MailChimpForm'
+import { Footer } from '../starter/components/Footer'
 
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
@@ -296,6 +298,7 @@ const LayoutSlug = props => {
               <section
                 className='wow fadeInUp p-5 justify-center mx-auto'
                 data-wow-delay='.2s'>
+                <YandexRTBAdvertisement />
                 <WWAds orientation='horizontal' className='w-full' />
                 {post && <NotionPage post={post} />}
                 <WWAds orientation='horizontal' className='w-full' />
@@ -310,6 +313,7 @@ const LayoutSlug = props => {
                 <div className='px-5'>
                   {/* 版权 */}
                   <PostCopyright {...props} />
+                  <MailChimpForm />
                   {/* 文章推荐 */}
                   <PostRecommend {...props} />
                 </div>

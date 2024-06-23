@@ -7,6 +7,7 @@ import { InfoCard } from './InfoCard'
 import LatestPostsGroupMini from './LatestPostsGroupMini'
 import TagGroups from './TagGroups'
 import TouchMeCard from './TouchMeCard'
+import DiscordWidget from '@/components/DiscordWidget'
 
 const FaceBookPage = dynamic(
   () => {
@@ -56,7 +57,7 @@ export default function SideRight(props) {
         </div>
 
         {rightAreaSlot}
-
+        <DiscordWidget />
         <FaceBookPage />
         <Live2D />
 
