@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Image from 'next/image'
+import LazyImage from '@/components/LazyImage'
 
 /**
  * Discord Widget
@@ -41,7 +41,7 @@ const DiscordWidget = ({ collapsed }) => {
             target='_blank'
             rel='noopener noreferrer'
             className='p-1 pr-2 pt-0'>
-            <Image
+            <LazyImage
               src='https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F08f4bc37-40c8-4ca9-bf10-b148b765bcb8%2F6e223cc3-4ed0-4e3e-8073-633074f171be%2FCopy_of_Mindset_community_(1).png?id=0996b2d9-cfae-4620-8539-bb8a483d1604&table=collection&spaceId=08f4bc37-40c8-4ca9-bf10-b148b765bcb8&width=60&userId=516f50a6-3fe8-4061-b329-940fc9da147f&cache=v2'
               alt='Discord'
               width={28}
