@@ -29,7 +29,7 @@ const DiscordWidget = ({ collapsed }) => {
   if (!widgetData) {
     return <></>
   }
-  const containerClassName = `shadow-md hover:shadow-xl dark:text-gray-300 border dark:border-black rounded-xl px-2 py-4 bg-white dark:bg-hexo-black-gray lg:duration-100 justify-center ${collapsed ? 'bg-[#7289da] text-white h-16' : 'bg-white dark:bg-hexo-black-gray h-auto'}`
+  const containerClassName = `shadow-md hover:shadow-xl dark:text-gray-300 border dark:border-black rounded-xl px-2 py-4 lg:duration-100 justify-center ${collapsed ? 'bg-[#7289da] text-white h-16' : 'bg-white dark:bg-hexo-black-gray h-auto'}`
 
   return (
     <div className={containerClassName}>
