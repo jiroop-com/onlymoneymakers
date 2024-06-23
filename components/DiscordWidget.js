@@ -14,7 +14,7 @@ const DiscordWidget = ({ collapsed }) => {
     const fetchWidgetData = async () => {
       try {
         const response = await fetch(
-          'https://discord.com/api/guilds/783713892131536927/widget.json'
+          'https://discord.com/api/guilds/456048230250184734/widget.json'
         )
         const data = await response.json()
         setWidgetData(data)
@@ -42,7 +42,7 @@ const DiscordWidget = ({ collapsed }) => {
             rel='noopener noreferrer'
             className='p-1 pr-2 pt-0'>
             <LazyImage
-              src='https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F08f4bc37-40c8-4ca9-bf10-b148b765bcb8%2F6e223cc3-4ed0-4e3e-8073-633074f171be%2FCopy_of_Mindset_community_(1).png?id=0996b2d9-cfae-4620-8539-bb8a483d1604&table=collection&spaceId=08f4bc37-40c8-4ca9-bf10-b148b765bcb8&width=60&userId=516f50a6-3fe8-4061-b329-940fc9da147f&cache=v2'
+              src='https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F08f4bc37-40c8-4ca9-bf10-b148b765bcb8%2Fccb0e50e-36ca-4b88-acfd-78cde0545ac8%2Fjiroop.png?table=block&id=18f158c3-a8bc-4b64-a0d3-517ca11696c3&spaceId=08f4bc37-40c8-4ca9-bf10-b148b765bcb8&width=250&userId=516f50a6-3fe8-4061-b329-940fc9da147f&cache=v2'
               alt='Discord'
               width={28}
               height={28}
@@ -73,7 +73,7 @@ const DiscordWidget = ({ collapsed }) => {
       {!collapsed && (
         <div style={{ width: '100%', height: '450px', overflow: 'hidden' }}>
           <iframe
-            src='https://discord.com/widget?id=783713892131536927&theme=light'
+            src='https://discord.com/widget?id=456048230250184734&theme=light'
             width='100%'
             height='100%'
             allowTransparency='true'
