@@ -14,7 +14,7 @@ const DiscordWidget = ({ collapsed }) => {
     const fetchWidgetData = async () => {
       try {
         const response = await fetch(
-          'https://discord.com/api/guilds/456048230250184734/widget.json'
+          'https://discord.com/api/guilds/1254518342010667019/widget.json'
         )
         const data = await response.json()
         setWidgetData(data)
@@ -73,7 +73,7 @@ const DiscordWidget = ({ collapsed }) => {
       {!collapsed && (
         <div style={{ width: '100%', height: '450px', overflow: 'hidden' }}>
           <iframe
-            src='https://discord.com/widget?id=456048230250184734&theme=light'
+            src='https://discord.com/widget?id=1254518342010667019&theme=light'
             width='100%'
             height='100%'
             allowTransparency='true'
