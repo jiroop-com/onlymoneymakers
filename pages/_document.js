@@ -25,7 +25,9 @@ class MyDocument extends Document {
           }}
         />
 
-        <script src='https://cdn.jsdelivr.net/gh/Mindset-Community/live2d-widget@latest/autoload.js'></script>
+        <script
+          src='https://cdn.jsdelivr.net/gh/Mindset-Community/live2d-widget@latest/autoload.js'
+          async></script>
 
         <Head>
           {/* 预加载字体 */}
