@@ -48,7 +48,16 @@ export const MenuList = props => {
 
   return (
     <ul
-      className={`dark:text-white p-4 space-y-4 shadow-md hover:shadow-xl transition-shadow duration-200 bg-white dark:bg-hexo-black-gray my-4 rounded-md`}>
+      className={`dark:text-white p-4 space-y-4 shadow-md hover:shadow-xl transition-shadow duration-200 bg-white dark:bg-hexo-black-gray my-4 rounded-md max-h-96 overflow-y-auto`}
+      style={{
+        msOverflowStyle: 'none', // Hide scrollbar for IE and Edge
+        scrollbarWidth: 'none' // Hide scrollbar for Firefox
+      }}>
+      <style jsx>{`
+        ul::-webkit-scrollbar {
+          display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+        }
+      `}</style>
       <li>
         <button
           className='flex items-center hover:scale-105 transition-transform duration-200'
