@@ -44,7 +44,7 @@ const PaginationSimple = ({ page, showNext }) => {
         passHref
         rel='next'
         className={`${
-          showNext ? 'visible' : 'invisible'
+          showNext ? 'invisible' : 'visible'
         } text-center w-full duration-200 px-4 py-2 hover:border-black dark:border-hexo-black-gray border-b-2 hover:font-bold`}>
         {locale.PAGINATION.NEXT}→
       </Link>
