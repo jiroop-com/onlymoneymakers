@@ -28,7 +28,7 @@ class MyDocument extends Document {
         <script
           src='https://cdn.jsdelivr.net/gh/Mindset-Community/live2d-widget@latest/autoload.js'
           async></script>
-
+        <meta name='yandex-verification' content='f9bc4558c3b54f76' />
         <Head>
           {/* 预加载字体 */}
           {BLOG.FONT_AWESOME && (
