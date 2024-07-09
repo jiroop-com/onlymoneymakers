@@ -21,7 +21,7 @@ class MyDocument extends Document {
           dangerouslySetInnerHTML={{
             __html: `
             window.yaContextCb = window.yaContextCb || [];
-            window.lemonSqueezyAffiliateConfig = { store: "mindset-store" };
+            window.lemonSqueezyAffiliateConfig = { store: "jiroop-store" };
           `
           }}
         />
