@@ -2,7 +2,6 @@
 import BLOG from '@/blog.config'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
@@ -28,7 +27,6 @@ class MyDocument extends Document {
         />
         <script src='https://lmsqueezy.com/affiliate.js' defer></script>
         <script src='https://gumroad.com/js/gumroad.js'></script>
-        <script src='https://cdn.jsdelivr.net/gh/Mindset-Community/live2d-widget@latest/autoload.js'></script>
 
         <Head>
           {/* 预加载字体 */}
