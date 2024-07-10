@@ -297,68 +297,69 @@ const CONFIG = {
     }
   ],
 
-  STARTER_FOOTER_SLOGAN: '"Stay Focused, Stay Elevated, Mindset."',
+  STARTER_FOOTER_SLOGAN:
+    '"Оставайся сосредоточенным, оставайся на высоте, настрой."',
 
   // 页脚三列菜单组
   STARTER_FOOTER_LINK_GROUP: [
     {
-      TITLE: 'About Us',
+      TITLE: 'О нас',
       LINK_GROUP: [
-        { TITLE: 'Homepage', URL: '/#home' },
-        { TITLE: 'Contact Us', URL: '/contact-us' },
-        { TITLE: 'Join Us', URL: '/?theme=starter' },
-        { TITLE: 'Store', URL: 'https://payhip.com/mindsetstore' }
+        { TITLE: 'Главная страница', URL: '/#home' },
+        { TITLE: 'Свяжитесь с нами', URL: '/contact-us' },
+        {
+          TITLE: 'Присоединяйтесь к нам',
+          URL: 'https://whop.com/jiroop-academy/'
+        },
+        { TITLE: 'Магазин', URL: 'https://store.jiroop.com/' }
       ]
     },
     {
-      TITLE: 'Social Media',
+      TITLE: 'Социальные сети',
       LINK_GROUP: [
         {
           TITLE: 'Facebook',
-          URL: 'https://www.facebook.com/people/Mindset-Community/61556389438584/'
+          URL: 'https://www.facebook.com/profile.php?id=61561155586983'
         },
-        { TITLE: 'ВКонтакте', URL: 'https://vk.com/mindset.community' },
-        {
-          TITLE: 'Discord',
-          URL: 'https://discord.com/servers/mindset-community-783713892131536927'
-        },
-        { TITLE: 'Telegram', URL: 'https://t.me/mindset_community' },
-        {
-          TITLE: 'Instagram',
-          URL: 'https://www.instagram.com/mindset.onthewifi/'
-        },
-        { TITLE: 'Twitter', URL: 'https://twitter.com/mindsetonwifi' },
-        { TITLE: 'Tiktok', URL: 'https://www.tiktok.com/@mindset.onthewifi' }
+        { TITLE: 'ВКонтакте', URL: 'https://vk.com/jiroop' }
       ]
     },
     {
-      TITLE: 'Youtube',
+      TITLE: 'Другие веб-сайты',
       LINK_GROUP: [
         {
-          TITLE: 'Health & Wellness',
-          URL: 'https://www.youtube.com/@mindset.wellness.888'
+          TITLE: 'Блог',
+          URL: 'https://jiroop.com/'
         },
         {
-          TITLE: 'Commerce',
-          URL: 'https://www.youtube.com/@mindset.commerce.888'
+          TITLE: 'Магазин',
+          URL: 'https://store.jiroop.com/'
         },
         {
-          TITLE: 'Finance',
-          URL: 'https://www.youtube.com/@mindset.finance.888'
+          TITLE: 'Игры',
+          URL: 'https://games.jiroop.com/'
+        },
+        {
+          TITLE: 'Испанский',
+          URL: 'https://es.jiroop.com/'
+        },
+        {
+          TITLE: 'Русский',
+          URL: 'https://ru.jiroop.com'
         }
       ]
     }
   ],
 
-  STARTER_FOOTER_BLOG_LATEST_TITLE: 'Latest Articles',
+  STARTER_FOOTER_BLOG_LATEST_TITLE: 'Последние статьи',
 
-  STARTER_FOOTER_PRIVACY_POLICY_TEXT: 'Privacy Policy',
+  STARTER_FOOTER_PRIVACY_POLICY_TEXT: 'Политика конфиденциальности',
   STARTER_FOOTER_PRIVACY_POLICY_URL: '/privacy-policy',
 
-  STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_TEXT: 'Legal Disclaimer',
+  STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_TEXT: 'Юридический отказ',
   STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_URL: '/legacy-notice',
 
-  STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_TEXT: 'Terms of Service',
+  STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_TEXT: 'Условия обслуживания',
   STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_URL: '/terms-of-use',
 
   // 404页面的提示语
@@ -369,7 +370,7 @@ const CONFIG = {
   STARTER_404_BACK: 'Back to Homepage',
 
   STARTER_POST_REDIRECT_ENABLE: true, // 默認開啟重定向
-  STARTER_POST_REDIRECT_URL: 'https://mindset.onthewifi.com', // 重定向域名
+  STARTER_POST_REDIRECT_URL: 'https://ru.jiroop.com/', // 重定向域名
   STARTER_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_STARTER_NEWSLETTER || true // 是否开启邮件订阅 请先配置mailchimp功能 https://docs.tangly1024.com/article/notion-next-mailchimp
 }
 export default CONFIG
