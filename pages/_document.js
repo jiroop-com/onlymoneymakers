@@ -31,6 +31,7 @@ class MyDocument extends Document {
         <meta name='yandex-verification' content='f9bc4558c3b54f76' />
         <Head>
           {/* 预加载字体 */}
+
           {BLOG.FONT_AWESOME && (
             <>
               <link
