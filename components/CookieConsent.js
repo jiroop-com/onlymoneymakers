@@ -61,6 +61,13 @@ const CookieConsent = () => {
       secure: true, // Set to true if serving over HTTPS
       sameSite: 'None' // Required for cross-site requests
     })
+    setCookie('gamepixImageCookie', 'gamepixImageValue', {
+      maxAge: 31536000, // 1 year in seconds
+      path: '/',
+      domain: 'img.gamepix.com', // Replace with the domain of the script
+      secure: true, // Set to true if serving over HTTPS
+      sameSite: 'None' // Required for cross-site requests
+    })
 
     setCookie('localConsent', 'true', {
       maxAge: 31536000, // 1 year in seconds
