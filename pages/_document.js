@@ -2,7 +2,6 @@
 import BLOG from '@/blog.config'
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 
-
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx)
@@ -22,7 +21,7 @@ class MyDocument extends Document {
           dangerouslySetInnerHTML={{
             __html: `
             window.yaContextCb = window.yaContextCb || [];
-            window.lemonSqueezyAffiliateConfig = { store: "mindset-store" };
+            window.lemonSqueezyAffiliateConfig = { store: "jiroop-store" };
           `
           }}
         />
@@ -32,6 +31,7 @@ class MyDocument extends Document {
 
         <Head>
           {/* 预加载字体 */}
+
           {BLOG.FONT_AWESOME && (
             <>
               <link
