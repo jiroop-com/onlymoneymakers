@@ -43,7 +43,7 @@ import { Style } from './style'
 import YandexRTBAdvertisement from '@/components/YandexAds'
 import MailChimpForm from './components/MailChimpForm'
 import { Footer } from '../starter/components/Footer'
-
+import CookieConsent from '@/components/CookieConsent'
 /**
  * 基础布局 采用上中下布局，移动端使用顶部侧边导航栏
  * @param props
@@ -70,6 +70,7 @@ const LayoutBase = props => {
         </>
       ) : null}
       {fullWidth ? null : <PostHeader {...props} isDarkMode={isDarkMode} />}
+      <CookieConsent />
     </header>
   )
 
