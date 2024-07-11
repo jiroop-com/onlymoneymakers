@@ -335,6 +335,7 @@ const LayoutSlug = props => {
           </div>
 
           {/* 其它游戏列表 */}
+          <GameListIndexCombine posts={randomGames} />
         </div>
       )}
     </>
