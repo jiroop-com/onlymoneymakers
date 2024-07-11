@@ -27,6 +27,7 @@ class MyDocument extends Document {
         />
         <script src='https://lmsqueezy.com/affiliate.js' defer></script>
         <script src='https://gumroad.com/js/gumroad.js'></script>
+        <script src='https://cookiechimp.com/widget/gZvtpV.js'></script>
         <script
           async
           src='https://fundingchoicesmessages.google.com/i/pub-8437419081527400?ers=1'
