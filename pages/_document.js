@@ -15,7 +15,7 @@ class MyDocument extends Document {
           async
           src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8437419081527400'
           crossorigin='anonymous'></script>
-        <meta name='yandex-verification' content='622aa0408012f881' />
+        <meta name='yandex-verification' content='f9bc4558c3b54f76' />
         <script src='https://yandex.ru/ads/system/context.js' async></script>
         <script
           dangerouslySetInnerHTML={{
