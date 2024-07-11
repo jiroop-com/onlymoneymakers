@@ -15,7 +15,7 @@ const CONFIG = {
     'Transform Your Mindset, Transform Your Life: Empowering Your Journey to Success with Insightful Content and Valuable Strategies at Mindset', // 英雄区文字
   // 英雄区两个按钮，如果TEXT留空则隐藏按钮
   STARTER_HERO_BUTTON_1_TEXT: 'Start your experience now!', // 英雄区按钮
-  STARTER_HERO_BUTTON_1_URL: 'https://whop.com/mindset-community', // 英雄区按钮
+  STARTER_HERO_BUTTON_1_URL: 'https://whop.com/jiroop-academy', // 英雄区按钮
   STARTER_HERO_BUTTON_2_TEXT: 'Discord Server', // 英雄区按钮
   STARTER_HERO_BUTTON_2_URL:
     'https://discord.com/servers/mindset-community-783713892131536927', // 英雄区按钮
@@ -29,7 +29,7 @@ const CONFIG = {
   STARTER_NAV_BUTTON_1_URL: '/archive',
 
   STARTER_NAV_BUTTON_2_TEXT: 'Join Now!',
-  STARTER_NAV_BUTTON_2_URL: 'https://whop.com/mindset-community',
+  STARTER_NAV_BUTTON_2_URL: 'https://whop.com/jiroop-academy',
 
   // 特性区块
   STARTER_FEATURE_ENABLE: true, // 特性区块开关
@@ -41,24 +41,24 @@ const CONFIG = {
   STARTER_FEATURE_1_TEXT_1:
     'Explore our digital content offering ebooks, resources, courses, and more!', // 特性1
   STARTER_FEATURE_1_BUTTON_TEXT: 'Learn More', // 特性1
-  STARTER_FEATURE_1_BUTTON_URL: 'https://whop.com/mindset-community', // 特性1
+  STARTER_FEATURE_1_BUTTON_URL: 'https://whop.com/jiroop-academy', // 特性1
 
   STARTER_FEATURE_2_TITLE_1: 'Events', // 特性2
   STARTER_FEATURE_2_TEXT_1:
     'Discover our upcoming events and join us for enriching experiences!', // 特性2
   STARTER_FEATURE_2_BUTTON_TEXT: 'Learn More', // 特性2
-  STARTER_FEATURE_2_BUTTON_URL: 'https://whop.com/mindset-community', // 特性2
+  STARTER_FEATURE_2_BUTTON_URL: 'https://whop.com/jiroop-academy', // 特性2
 
   STARTER_FEATURE_3_TITLE_1: 'Chat Access', // 特性3
   STARTER_FEATURE_3_TEXT_1:
     'Gain chat access for real-time communication and support.', // 特性3
   STARTER_FEATURE_3_BUTTON_TEXT: 'Learn More', // 特性3
-  STARTER_FEATURE_3_BUTTON_URL: 'https://whop.com/mindset-community', // 特性3
+  STARTER_FEATURE_3_BUTTON_URL: 'https://whop.com/jiroop-academy', // 特性3
 
   STARTER_FEATURE_4_TITLE_1: 'Challenges', // 特性4
   STARTER_FEATURE_4_TEXT_1: 'Take on our challenges and achieve new heights!', // 特性4
   STARTER_FEATURE_4_BUTTON_TEXT: 'Learn More', // 特性4
-  STARTER_FEATURE_4_BUTTON_URL: 'https://whop.com/mindset-community', // 特性4
+  STARTER_FEATURE_4_BUTTON_URL: 'https://whop.com/jiroop-academy', // 特性4
 
   // 首页ABOUT区块
   STARTER_ABOUT_ENABLE: true, // ABOUT区块开关
@@ -297,68 +297,64 @@ const CONFIG = {
     }
   ],
 
-  STARTER_FOOTER_SLOGAN: '"Stay Focused, Stay Elevated, Mindset."',
+  STARTER_FOOTER_SLOGAN: '"Mantén el enfoque, mantente elevado, mentalidad."',
 
   // 页脚三列菜单组
   STARTER_FOOTER_LINK_GROUP: [
     {
-      TITLE: 'About Us',
+      TITLE: 'Sobre Nosotros',
       LINK_GROUP: [
-        { TITLE: 'Homepage', URL: '/#home' },
-        { TITLE: 'Contact Us', URL: '/contact-us' },
-        { TITLE: 'Join Us', URL: '/?theme=starter' },
-        { TITLE: 'Store', URL: 'https://payhip.com/mindsetstore' }
+        { TITLE: 'Página Principal', URL: '/#home' },
+        { TITLE: 'Contáctanos', URL: '/contact-us' },
+        { TITLE: 'Únete a Nosotros', URL: 'https://whop.com/jiroop-academy' },
+        { TITLE: 'Tienda', URL: 'https://store.jiroop.com' }
       ]
     },
     {
-      TITLE: 'Social Media',
+      TITLE: 'Redes Sociales',
       LINK_GROUP: [
         {
           TITLE: 'Facebook',
-          URL: 'https://www.facebook.com/people/Mindset-Community/61556389438584/'
-        },
-        { TITLE: 'ВКонтакте', URL: 'https://vk.com/mindset.community' },
-        {
-          TITLE: 'Discord',
-          URL: 'https://discord.com/servers/mindset-community-783713892131536927'
-        },
-        { TITLE: 'Telegram', URL: 'https://t.me/mindset_community' },
-        {
-          TITLE: 'Instagram',
-          URL: 'https://www.instagram.com/mindset.onthewifi/'
-        },
-        { TITLE: 'Twitter', URL: 'https://twitter.com/mindsetonwifi' },
-        { TITLE: 'Tiktok', URL: 'https://www.tiktok.com/@mindset.onthewifi' }
+          URL: 'https://www.facebook.com/profile.php?id=61561155586983'
+        }
       ]
     },
     {
-      TITLE: 'Youtube',
+      TITLE: 'Otros sitios web',
       LINK_GROUP: [
         {
-          TITLE: 'Health & Wellness',
-          URL: 'https://www.youtube.com/@mindset.wellness.888'
+          TITLE: 'Blog',
+          URL: 'https://jiroop.com'
         },
         {
-          TITLE: 'Commerce',
-          URL: 'https://www.youtube.com/@mindset.commerce.888'
+          TITLE: 'Tienda',
+          URL: 'https://store.jiroop.com'
         },
         {
-          TITLE: 'Finance',
-          URL: 'https://www.youtube.com/@mindset.finance.888'
+          TITLE: 'Juegos',
+          URL: 'https://games.jiroop.com'
+        },
+        {
+          TITLE: 'Español',
+          URL: 'https://es.jiroop.com'
+        },
+        {
+          TITLE: 'Ruso',
+          URL: 'https://ru.jiroop.com'
         }
       ]
     }
   ],
 
-  STARTER_FOOTER_BLOG_LATEST_TITLE: 'Latest Articles',
+  STARTER_FOOTER_BLOG_LATEST_TITLE: 'Últimos Artículos',
 
-  STARTER_FOOTER_PRIVACY_POLICY_TEXT: 'Privacy Policy',
+  STARTER_FOOTER_PRIVACY_POLICY_TEXT: 'Política de Privacidad',
   STARTER_FOOTER_PRIVACY_POLICY_URL: '/privacy-policy',
 
-  STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_TEXT: 'Legal Disclaimer',
+  STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_TEXT: 'Aviso Legal',
   STARTER_FOOTER_PRIVACY_LEGAL_NOTICE_URL: '/legacy-notice',
 
-  STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_TEXT: 'Terms of Service',
+  STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_TEXT: 'Términos de Servicio',
   STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_URL: '/terms-of-use',
 
   // 404页面的提示语
@@ -369,7 +365,7 @@ const CONFIG = {
   STARTER_404_BACK: 'Back to Homepage',
 
   STARTER_POST_REDIRECT_ENABLE: true, // 默認開啟重定向
-  STARTER_POST_REDIRECT_URL: 'https://mindset.onthewifi.com', // 重定向域名
+  STARTER_POST_REDIRECT_URL: 'https://es.jiroop.com', // 重定向域名
   STARTER_NEWSLETTER: process.env.NEXT_PUBLIC_THEME_STARTER_NEWSLETTER || true // 是否开启邮件订阅 请先配置mailchimp功能 https://docs.tangly1024.com/article/notion-next-mailchimp
 }
 export default CONFIG
