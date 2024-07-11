@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { setCookie, hasCookie } from 'cookies-next'
 
 const CookieConsent = () => {
-  const [showConsent, setShowConsent] = useState(true)
+  const [showConsent, setShowConsent] = useState(!hasCookie('localConsent'))
 
   useEffect(() => {
     if (!hasCookie('localConsent')) {
       document.body.classList.add('overflow-hidden') // Prevent scrolling when banner is shown
     } else {
-      setShowConsent(false)
       document.body.classList.remove('overflow-hidden') // Restore scrolling when banner is hidden
     }
   }, [])
@@ -54,6 +53,7 @@ const CookieConsent = () => {
       secure: true, // Set to true if serving over HTTPS
       sameSite: 'None' // Required for cross-site requests
     })
+
     setCookie('gamepixCookie', 'gamepixValue', {
       maxAge: 31536000, // 1 year in seconds
       path: '/',
@@ -62,7 +62,12 @@ const CookieConsent = () => {
       sameSite: 'None' // Required for cross-site requests
     })
 
-    // Add more setCookie calls for additional third-party cookies as needed
+    setCookie('localConsent', 'true', {
+      maxAge: 31536000, // 1 year in seconds
+      path: '/',
+      secure: true, // Set to true if serving over HTTPS
+      sameSite: 'None' // Required for cross-site requests
+    })
 
     setShowConsent(false) // Hide the consent banner after accepting
     document.body.classList.remove('overflow-hidden') // Restore scrolling
