@@ -31,7 +31,7 @@ import SideBarDrawer from './components/SideBarDrawer'
 import CONFIG from './config'
 import { Style } from './style'
 import DiscordWidget from '@/components/DiscordWidget'
-import CookieConsent from '@/components/CookieConsent'
+
 // const AlgoliaSearchModal = dynamic(() => import('@/components/AlgoliaSearchModal'), { ssr: false })
 
 // 主题全局状态
@@ -144,7 +144,6 @@ const LayoutIndex = props => {
       <GameListRecent />
       {/* 游戏列表 */}
       <LayoutPostList {...props} />
-      <CookieConsent />
 
       {/* 广告 */}
       <div className='w-full'>
