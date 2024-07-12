@@ -19,7 +19,7 @@ const BLOG = {
   // 3.14.1版本后，欢迎语在此配置，英文逗号隔开 ,  即可支持多个欢迎语打字效果。
   GREETING_WORDS:
     process.env.NEXT_PUBLIC_GREETING_WORDS ||
-    'Latest Community Updates, Latest News Posts, Welcome',
+    'Latest Community Updates, Latest News Posts, Welcome to Jiroop',
 
   CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || false, // 支持Menu 类型，从3.12.0版本起，各主题将逐步支持灵活的二级菜单配置，替代了原来的Page类型，此配置是试验功能、默认关闭。
 
@@ -28,7 +28,7 @@ const BLOG = {
   LINK: process.env.NEXT_PUBLIC_LINK || 'https://ru.jiroop.com', // 网站地址
   KEYWORDS:
     process.env.NEXT_PUBLIC_KEYWORD ||
-    'mindset, news, blog, trading, e-commerce, health, fitness, business', // 网站关键词 英文逗号隔开
+    'Jiroop, news, blog, trading, e-commerce, health, fitness, business', // 网站关键词 英文逗号隔开
 
   // 社交链接，不需要可留空白，例如 CONTACT_WEIBO:''
   CONTACT_EMAIL: process.env.NEXT_PUBLIC_CONTACT_EMAIL || '', // 邮箱地址 例如mail@tangly1024.com
@@ -541,7 +541,7 @@ const BLOG = {
 
   // 作废配置
   AVATAR: process.env.NEXT_PUBLIC_AVATAR || '/avatar.svg', // 作者头像，被notion中的ICON覆盖。若无ICON则取public目录下的avatar.png
-  TITLE: process.env.NEXT_PUBLIC_TITLE || 'Mindset', // 站点标题 ，被notion中的页面标题覆盖；此处请勿留空白，否则服务器无法编译
+  TITLE: process.env.NEXT_PUBLIC_TITLE || 'Jiroop', // 站点标题 ，被notion中的页面标题覆盖；此处请勿留空白，否则服务器无法编译
   HOME_BANNER_IMAGE:
     process.env.NEXT_PUBLIC_HOME_BANNER_IMAGE ||
     'https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F08f4bc37-40c8-4ca9-bf10-b148b765bcb8%2F0018d8d7-656d-46a2-8049-31be477a7a84%2FBlue_Simple_Background_(1).png?id=b4e8402d-ff93-4196-9189-330f30119cb8&table=collection&spaceId=08f4bc37-40c8-4ca9-bf10-b148b765bcb8&width=2000&userId=516f50a6-3fe8-4061-b329-940fc9da147f&cache=v2', // 首页背景大图, 会被notion中的封面图覆盖，若无封面图则会使用代码中的 /public/bg_image.jpg 文件

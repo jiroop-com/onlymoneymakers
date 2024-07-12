@@ -15,7 +15,7 @@ const CONFIG = {
     'Transform Your Mindset, Transform Your Life: Empowering Your Journey to Success with Insightful Content and Valuable Strategies at Mindset', // 英雄区文字
   // 英雄区两个按钮，如果TEXT留空则隐藏按钮
   STARTER_HERO_BUTTON_1_TEXT: 'Start your experience now!', // 英雄区按钮
-  STARTER_HERO_BUTTON_1_URL: 'https://whop.com/mindset-community', // 英雄区按钮
+  STARTER_HERO_BUTTON_1_URL: 'https://whop.com/jiroop-academy', // 英雄区按钮
   STARTER_HERO_BUTTON_2_TEXT: 'Discord Server', // 英雄区按钮
   STARTER_HERO_BUTTON_2_URL:
     'https://discord.com/servers/mindset-community-783713892131536927', // 英雄区按钮
@@ -29,7 +29,7 @@ const CONFIG = {
   STARTER_NAV_BUTTON_1_URL: '/archive',
 
   STARTER_NAV_BUTTON_2_TEXT: 'Join Now!',
-  STARTER_NAV_BUTTON_2_URL: 'https://whop.com/mindset-community',
+  STARTER_NAV_BUTTON_2_URL: 'https://whop.com/jiroop-academy',
 
   // 特性区块
   STARTER_FEATURE_ENABLE: true, // 特性区块开关
@@ -41,24 +41,24 @@ const CONFIG = {
   STARTER_FEATURE_1_TEXT_1:
     'Explore our digital content offering ebooks, resources, courses, and more!', // 特性1
   STARTER_FEATURE_1_BUTTON_TEXT: 'Learn More', // 特性1
-  STARTER_FEATURE_1_BUTTON_URL: 'https://whop.com/mindset-community', // 特性1
+  STARTER_FEATURE_1_BUTTON_URL: 'https://whop.com/jiroop-academy', // 特性1
 
   STARTER_FEATURE_2_TITLE_1: 'Events', // 特性2
   STARTER_FEATURE_2_TEXT_1:
     'Discover our upcoming events and join us for enriching experiences!', // 特性2
   STARTER_FEATURE_2_BUTTON_TEXT: 'Learn More', // 特性2
-  STARTER_FEATURE_2_BUTTON_URL: 'https://whop.com/mindset-community', // 特性2
+  STARTER_FEATURE_2_BUTTON_URL: 'https://whop.com/jiroop-academy', // 特性2
 
   STARTER_FEATURE_3_TITLE_1: 'Chat Access', // 特性3
   STARTER_FEATURE_3_TEXT_1:
     'Gain chat access for real-time communication and support.', // 特性3
   STARTER_FEATURE_3_BUTTON_TEXT: 'Learn More', // 特性3
-  STARTER_FEATURE_3_BUTTON_URL: 'https://whop.com/mindset-community', // 特性3
+  STARTER_FEATURE_3_BUTTON_URL: 'https://whop.com/jiroop-academy', // 特性3
 
   STARTER_FEATURE_4_TITLE_1: 'Challenges', // 特性4
   STARTER_FEATURE_4_TEXT_1: 'Take on our challenges and achieve new heights!', // 特性4
   STARTER_FEATURE_4_BUTTON_TEXT: 'Learn More', // 特性4
-  STARTER_FEATURE_4_BUTTON_URL: 'https://whop.com/mindset-community', // 特性4
+  STARTER_FEATURE_4_BUTTON_URL: 'https://whop.com/jiroop-academy', // 特性4
 
   // 首页ABOUT区块
   STARTER_ABOUT_ENABLE: true, // ABOUT区块开关
@@ -248,7 +248,7 @@ const CONFIG = {
   STARTER_CONTACT_LOCATION_TITLE: 'Our Location',
   STARTER_CONTACT_LOCATION_TEXT: 'Wordwide',
   STARTER_CONTACT_EMAIL_TITLE: 'How can we assist you?',
-  STARTER_CONTACT_EMAIL_TEXT: 'mindset.community.email@gmail.com',
+  STARTER_CONTACT_EMAIL_TEXT: 'support@jiroop.com',
 
   // 嵌入外部表单
   STARTER_CONTACT_MSG_EXTERNAL_URL:
