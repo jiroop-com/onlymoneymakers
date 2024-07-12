@@ -248,7 +248,7 @@ const CONFIG = {
   STARTER_CONTACT_LOCATION_TITLE: 'Our Location',
   STARTER_CONTACT_LOCATION_TEXT: 'Wordwide',
   STARTER_CONTACT_EMAIL_TITLE: 'How can we assist you?',
-  STARTER_CONTACT_EMAIL_TEXT: 'mindset.community.email@gmail.com',
+  STARTER_CONTACT_EMAIL_TEXT: 'support@jiroop.com',
 
   // 嵌入外部表单
   STARTER_CONTACT_MSG_EXTERNAL_URL:

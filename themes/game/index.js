@@ -18,7 +18,6 @@ import { BlogListScroll } from './components/BlogListScroll'
 import BlogPostBar from './components/BlogPostBar'
 import { Footer } from './components/Footer'
 import GameEmbed from './components/GameEmbed'
-import { GameListIndexCombine } from './components/GameListIndexCombine'
 import { GameListRelate } from './components/GameListRealate'
 import { GameListRecent } from './components/GameListRecent'
 import GroupCategory from './components/GroupCategory'
@@ -31,7 +30,7 @@ import SideBarDrawer from './components/SideBarDrawer'
 import CONFIG from './config'
 import { Style } from './style'
 import DiscordWidget from '@/components/DiscordWidget'
-
+import { RandomGameList } from './components/RandomGameList'
 // const AlgoliaSearchModal = dynamic(() => import('@/components/AlgoliaSearchModal'), { ssr: false })
 
 // 主题全局状态
@@ -335,7 +334,7 @@ const LayoutSlug = props => {
           </div>
 
           {/* 其它游戏列表 */}
-          <GameListIndexCombine posts={randomGames} />
+          <RandomGameList posts={randomGames} />
         </div>
       )}
     </>
