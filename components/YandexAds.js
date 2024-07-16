@@ -1,37 +1,78 @@
 import React, { useEffect } from 'react'
-import BLOG from '@/blog.config'
+import { siteConfig } from '@/lib/config'
 
-const YandexRTBAdvertisement = () => {
-  useEffect(() => {
-    if (BLOG.LANG === 'ru-RU') {
-      // Function to render Yandex advertisement
-      const renderYandexAd = () => {
-        if (window.yaContextCb) {
-          window.yaContextCb.push(() => {
-            window.Ya.Context.AdvManager.render({
-              blockId: 'R-A-7739238-1',
-              renderTo: 'yandex_rtb_R-A-7739238-1'
-            })
-          })
-        }
-      }
-
-      // Call the function to render the Yandex advertisement
-      renderYandexAd()
-
-      // Clean up function (optional)
-      return () => {
-        // Perform any cleanup here if needed
-      }
-    }
-  }, []) // Empty dependency array means this effect runs only once after initial render
-
-  // Conditional rendering based on locale
-  return BLOG.LANG === 'ru-RU' ? (
-    <div id='yandex_rtb_R-A-7739238-1' className='py-4'>
-      {/* This div will be used to render the Yandex advertisement */}
-    </div>
-  ) : null
+// Helper function to render Yandex ad
+const renderYandexAd = (
+  blockId,
+  renderTo,
+  adType = 'text',
+  platform = 'desktop'
+) => {
+  if (window.yaContextCb) {
+    window.yaContextCb.push(() => {
+      window.Ya.Context.AdvManager.render({
+        blockId,
+        renderTo,
+        type: adType,
+        platform
+      })
+    })
+  }
 }
 
-export default YandexRTBAdvertisement
+const YandexAds = ({ adType }) => {
+  useEffect(() => {
+    // Define ad block IDs and types based on the adType prop
+    const adConfigs = {
+      banner: {
+        blockId: siteConfig('YANDEX_AD_BANNER'),
+        renderTo: 'yandex_ad_banner'
+      },
+      floor: {
+        blockId: siteConfig('YANDEX_AD_FLOOR'),
+        renderTo: 'yandex_ad_floor',
+        adType: 'floorAd'
+      },
+      fullscreen: {
+        blockId: siteConfig('YANDEX_AD_FULLSCREEN'),
+        renderTo: 'yandex_ad_fullscreen',
+        adType: 'fullscreen'
+      },
+      feed: {
+        blockId: siteConfig('YANDEX_AD_FEED'),
+        renderTo: 'yandex_ad_feed',
+        adType: 'feed'
+      }
+    }
+
+    const {
+      blockId,
+      renderTo,
+      adType: type,
+      platform
+    } = adConfigs[adType] || {}
+
+    // Render the ad based on the adType
+    if (blockId) {
+      renderYandexAd(blockId, renderTo, type, platform)
+    }
+
+    // Clean up function (optional)
+    return () => {
+      // Perform any cleanup here if needed
+    }
+  }, [adType]) // Depend on adType prop to re-render ads when it changes
+
+  // Render different divs for different ad types
+  const adDivId =
+    {
+      banner: 'yandex_ad_banner',
+      floor: 'yandex_ad_floor',
+      fullscreen: 'yandex_ad_fullscreen',
+      feed: 'yandex_ad_feed'
+    }[adType] || ''
+
+  return <div id={adDivId} />
+}
+
+export default YandexAds

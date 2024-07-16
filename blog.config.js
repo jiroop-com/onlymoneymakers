@@ -25,8 +25,8 @@ const BLOG = {
   CUSTOM_MENU: process.env.NEXT_PUBLIC_CUSTOM_MENU || false, // 支持Menu 类型，从3.12.0版本起，各主题将逐步支持灵活的二级菜单配置，替代了原来的Page类型，此配置是试验功能、默认关闭。
 
   AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'Jiroop', // 您的昵称 例如 tangly1024
-  BIO: process.env.NEXT_PUBLIC_BIO || '¡Mantente elevado!', // 作者简介
-  LINK: process.env.NEXT_PUBLIC_LINK || 'https://es.jiroop.com', // 网站地址
+  BIO: process.env.NEXT_PUBLIC_BIO || 'Stay elevated!', // 作者简介
+  LINK: process.env.NEXT_PUBLIC_LINK || 'https://jiroop.com', // 网站地址
   KEYWORDS:
     process.env.NEXT_PUBLIC_KEYWORD ||
     'Jiroop, news, blog, trading, e-commerce, health, fitness, business', // 网站关键词 英文逗号隔开
@@ -160,7 +160,9 @@ const BLOG = {
   // 一个小插件展示你的facebook fan page~ @see https://tw.andys.pro/article/add-facebook-fanpage-notionnext
   FACEBOOK_PAGE_TITLE:
     process.env.NEXT_PUBLIC_FACEBOOK_PAGE_TITLE || 'Facebook', // 邊欄 Facebook Page widget 的標題欄，填''則無標題欄 e.g FACEBOOK 粉絲團'
-  FACEBOOK_PAGE: process.env.NEXT_PUBLIC_FACEBOOK_PAGE || '', // Facebook Page 的連結 e.g https://www.facebook.com/tw.andys.pro
+  FACEBOOK_PAGE:
+    process.env.NEXT_PUBLIC_FACEBOOK_PAGE ||
+    'https://www.facebook.com/profile.php?id=61561155586983', // Facebook Page 的連結 e.g https://www.facebook.com/tw.andys.pro
   FACEBOOK_PAGE_ID: process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID || '', // Facebook Page ID 來啟用 messenger 聊天功能
   FACEBOOK_APP_ID:
     process.env.NEXT_PUBLIC_FACEBOOK_APP_ID || '1087676089010946', // Facebook App ID 來啟用 messenger 聊天功能 获取: https://developers.facebook.com/
@@ -443,7 +445,7 @@ const BLOG = {
   ANALYTICS_BAIDU_ID: process.env.NEXT_PUBLIC_ANALYTICS_BAIDU_ID || '', // e.g 只需要填写百度统计的id，[baidu_id] -> https://hm.baidu.com/hm.js?[baidu_id]
   ANALYTICS_CNZZ_ID: process.env.NEXT_PUBLIC_ANALYTICS_CNZZ_ID || '', // 只需要填写站长统计的id, [cnzz_id] -> https://s9.cnzz.com/z_stat.php?id=[cnzz_id]&web_id=[cnzz_id]
   ANALYTICS_GOOGLE_ID:
-    process.env.NEXT_PUBLIC_ANALYTICS_GOOGLE_ID || 'G-9GZJ3K7R32', // 谷歌Analytics的id e.g: G-XXXXXXXXXX
+    process.env.NEXT_PUBLIC_ANALYTICS_GOOGLE_ID || 'G-KG2ZCDQRDJ', // 谷歌Analytics的id e.g: G-XXXXXXXXXX
 
   // 51la 站点统计 https://www.51.la/
   ANALYTICS_51LA_ID: process.env.NEXT_PUBLIC_ANALYTICS_51LA_ID || '', // id，在51la后台获取 参阅 https://docs.tangly1024.com/article/notion-next-51-la
@@ -486,6 +488,14 @@ const BLOG = {
     process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_SLOT_NATIVE || '8285244505', // Google AdScene>广告>按单元广告>新建原生广告
   ADSENSE_GOOGLE_SLOT_AUTO:
     process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_SLOT_AUTO || '7613244942', // Google AdScene>广告>按单元广告>新建展示广告 （自动广告）
+
+  // Yandex Ads
+  YANDEX_AD_BANNER:
+    process.env.NEXT_PUBLIC_YANDEX_AD_BANNER || 'R-A-10278963-1',
+  YANDEX_AD_FLOOR: process.env.NEXT_PUBLIC_YANDEX_AD_FLOOR || 'R-A-10278963-3',
+  YANDEX_AD_FULLSCREEN:
+    process.env.NEXT_PUBLIC_YANDEX_AD_FULLSCREEN || 'R-A-10278963-2',
+  YANDEX_AD_FEED: process.env.NEXT_PUBLIC_YANDEX_AD_FEED || 'R-A-10278963-4',
 
   // 万维广告
   AD_WWADS_ID: process.env.NEXT_PUBLIC_WWAD_ID || null, // https://wwads.cn/ 创建您的万维广告单元ID
