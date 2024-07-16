@@ -40,7 +40,7 @@ import SearchNav from './components/SearchNav'
 import SideRight from './components/SideRight'
 import CONFIG from './config'
 import { Style } from './style'
-import YandexRTBAdvertisement from '@/components/YandexAds'
+import YandexAds from '@/components/YandexAds'
 import MailChimpForm from './components/MailChimpForm'
 import { Footer } from '../starter/components/Footer'
 
@@ -119,6 +119,8 @@ const LayoutBase = props => {
             {slotRight}
           </div>
         </div>
+        <YandexAds adType='floor' />
+        <YandexAds adType='fullscreen' />
       </main>
 
       {/* 页脚 */}
@@ -298,7 +300,7 @@ const LayoutSlug = props => {
               <section
                 className='wow fadeInUp p-5 justify-center mx-auto'
                 data-wow-delay='.2s'>
-                <YandexRTBAdvertisement />
+                <YandexAds adType='banner' />
                 <WWAds orientation='horizontal' className='w-full' />
                 {post && <NotionPage post={post} />}
                 <WWAds orientation='horizontal' className='w-full' />

@@ -162,7 +162,7 @@ const BLOG = {
     process.env.NEXT_PUBLIC_FACEBOOK_PAGE_TITLE || 'Facebook', // 邊欄 Facebook Page widget 的標題欄，填''則無標題欄 e.g FACEBOOK 粉絲團'
   FACEBOOK_PAGE:
     process.env.NEXT_PUBLIC_FACEBOOK_PAGE ||
-    'https://www.facebook.com/profile.php?id=61556389438584', // Facebook Page 的連結 e.g https://www.facebook.com/tw.andys.pro
+    'https://www.facebook.com/profile.php?id=61561155586983', // Facebook Page 的連結 e.g https://www.facebook.com/tw.andys.pro
   FACEBOOK_PAGE_ID: process.env.NEXT_PUBLIC_FACEBOOK_PAGE_ID || '', // Facebook Page ID 來啟用 messenger 聊天功能
   FACEBOOK_APP_ID:
     process.env.NEXT_PUBLIC_FACEBOOK_APP_ID || '1087676089010946', // Facebook App ID 來啟用 messenger 聊天功能 获取: https://developers.facebook.com/
@@ -488,6 +488,14 @@ const BLOG = {
     process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_SLOT_NATIVE || '8285244505', // Google AdScene>广告>按单元广告>新建原生广告
   ADSENSE_GOOGLE_SLOT_AUTO:
     process.env.NEXT_PUBLIC_ADSENSE_GOOGLE_SLOT_AUTO || '7613244942', // Google AdScene>广告>按单元广告>新建展示广告 （自动广告）
+
+  // Yandex Ads
+  YANDEX_AD_BANNER:
+    process.env.NEXT_PUBLIC_YANDEX_AD_BANNER || 'R-A-10278963-1',
+  YANDEX_AD_FLOOR: process.env.NEXT_PUBLIC_YANDEX_AD_FLOOR || 'R-A-10278963-3',
+  YANDEX_AD_FULLSCREEN:
+    process.env.NEXT_PUBLIC_YANDEX_AD_FULLSCREEN || 'R-A-10278963-2',
+  YANDEX_AD_FEED: process.env.NEXT_PUBLIC_YANDEX_AD_FEED || 'R-A-10278963-4',
 
   // 万维广告
   AD_WWADS_ID: process.env.NEXT_PUBLIC_WWAD_ID || null, // https://wwads.cn/ 创建您的万维广告单元ID
