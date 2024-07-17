@@ -44,7 +44,6 @@ class MyDocument extends Document {
             src='https://fundingchoicesmessages.google.com/i/pub-8437419081527400?ers=1'
             nonce='N5LV6_wS_cDM1awWc4pNhA'></script>
           <script src='https://lmsqueezy.com/affiliate.js' defer></script>
-          <script src='https://gumroad.com/js/gumroad.js'></script>
           <script src='https://cookiechimp.com/widget/gZvtpV.js'></script>
 
           {/* Inline Scripts */}

@@ -42,7 +42,7 @@ const DiscordWidget = ({ collapsed }) => {
             rel='noopener noreferrer'
             className='p-1 pr-2 pt-0'>
             <LazyImage
-              src='https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F08f4bc37-40c8-4ca9-bf10-b148b765bcb8%2Fccb0e50e-36ca-4b88-acfd-78cde0545ac8%2Fjiroop.png?table=block&id=18f158c3-a8bc-4b64-a0d3-517ca11696c3&spaceId=08f4bc37-40c8-4ca9-bf10-b148b765bcb8&width=250&userId=516f50a6-3fe8-4061-b329-940fc9da147f&cache=v2'
+              src='https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F08f4bc37-40c8-4ca9-bf10-b148b765bcb8%2Fec882fe2-31db-4f80-a7e9-33477c96df72%2Fjiroop.png?table=collection&id=b4e8402d-ff93-4196-9189-330f30119cb8&t=b4e8402d-ff93-4196-9189-330f30119cb8&width=800&cache=v2'
               alt='Discord'
               width={28}
               height={28}
