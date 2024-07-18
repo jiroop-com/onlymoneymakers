@@ -32,6 +32,7 @@ class MyDocument extends Document {
 
           {/* Meta tags */}
           <meta name='yandex-verification' content='f9bc4558c3b54f76' />
+          <meta name='verify-admitad' content='46e072558c' />
 
           {/* External Scripts */}
           <script
