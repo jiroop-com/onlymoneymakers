@@ -26,7 +26,7 @@ const BLOG = {
 
   AUTHOR: process.env.NEXT_PUBLIC_AUTHOR || 'Jiroop', // 您的昵称 例如 tangly1024
   BIO: process.env.NEXT_PUBLIC_BIO || 'Stay elevated!', // 作者简介
-  LINK: process.env.NEXT_PUBLIC_LINK || 'https://jiroop.com', // 网站地址
+  LINK: process.env.NEXT_PUBLIC_LINK || 'https://ru.jiroop.com', // 网站地址
   KEYWORDS:
     process.env.NEXT_PUBLIC_KEYWORD ||
     'Jiroop, news, blog, trading, e-commerce, health, fitness, business', // 网站关键词 英文逗号隔开
