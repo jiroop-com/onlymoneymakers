@@ -34,6 +34,7 @@ class MyDocument extends Document {
           <meta name='yandex-verification' content='f9bc4558c3b54f76' />
 
           {/* External Scripts */}
+
           <script
             async
             src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8437419081527400'
@@ -77,6 +78,18 @@ class MyDocument extends Document {
                   signalGooglefcPresent();
                 })();
               `
+            }}
+          />
+          <script
+            id='mcjs'
+            dangerouslySetInnerHTML={{
+              __html: `!function(c,h,i,m,p){
+              m=c.createElement(h),
+              p=c.getElementsByTagName(h)[0],
+              m.async=1,
+              m.src=i,
+              p.parentNode.insertBefore(m,p)
+            }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/621ef09c93e5ce9fa43ad5d0c/bded34766b05d2a3fc3412ba3.js");`
             }}
           />
         </Head>
