@@ -175,7 +175,7 @@ const AdSlot = ({ type = 'show' }) => {
  */
 const AdEmbed = () => {
   useEffect(() => {
-    setTimeout(() => {
+    const convertInsElements = () => {
       // 找到所有 class 为 notion-text 且内容为 '<ins/>' 的 div 元素
       const notionTextElements = document.querySelectorAll('div.notion-text')
 
@@ -207,10 +207,27 @@ const AdEmbed = () => {
         }
       })
 
-      requestAd()
-    }, 1000)
+      requestAd() // Initialize the ad
+    }
+
+    const observer = new MutationObserver(() => {
+      convertInsElements()
+    })
+
+    // Observe changes in the body or specific element that wraps the content
+    const targetNode = document.querySelector('#notion-article')
+    if (targetNode) {
+      observer.observe(targetNode, { childList: true, subtree: true })
+    }
+
+    // Convert immediately on load
+    convertInsElements()
+
+    // Clean up observer on unmount
+    return () => observer.disconnect()
   }, [])
-  return <></>
+
+  return null
 }
 
 export { AdEmbed, AdSlot }
