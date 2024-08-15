@@ -295,6 +295,7 @@ const LayoutSlug = props => {
         {!lock && (
           <div id='article-wrapper' className='mx-auto md:w-full md:px-5'>
             {/* 文章主体 */}
+
             <article itemScope itemType='https://schema.org/Movie'>
               {/* Notion文章主体 */}
               <section
