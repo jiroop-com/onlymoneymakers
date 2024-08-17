@@ -13,7 +13,7 @@ const AdModule = () => {
     const fetchAds = async () => {
       try {
         const response = await fetch(
-          'https://raw.githubusercontent.com/jiroop-com/ad-assets/main/ad-config.json'
+          'https://raw.githubusercontent.com/jiroop-com/ad-assets/main/ad-business-config.json'
         )
         const data = await response.json()
         setAds(data)
