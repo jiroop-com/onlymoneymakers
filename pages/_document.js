@@ -78,40 +78,55 @@ class MyDocument extends Document {
               `
             }}
           />
+
           <script
             id='mcjs'
             dangerouslySetInnerHTML={{
               __html: `
-                !function(c,h,i,m,p){
-                  m=c.createElement(h),
-                  p=c.getElementsByTagName(h)[0],
-                  m.async=1,
-                  m.src=i,
-                  p.parentNode.insertBefore(m,p)
-                }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/621ef09c93e5ce9fa43ad5d0c/bded34766b05d2a3fc3412ba3.js");
+              !function(c,h,i,m,p){
+                m=c.createElement(h),
+                p=c.getElementsByTagName(h)[0],
+                m.async=1,
+                m.src=i,
+                p.parentNode.insertBefore(m,p)
+              }(document,"script","https://chimpstatic.com/mcjs-connected/js/users/621ef09c93e5ce9fa43ad5d0c/bded34766b05d2a3fc3412ba3.js");
 
-                // Function to enable scrolling by removing overflow:hidden
-                function enableScroll() {
-                  document.body.style.overflow = '';
+              function enableScroll() {
+                document.body.classList.remove('overflow-hidden', 'fixed', 'inset-0');
+              }
+
+              function disableScroll() {
+                document.body.classList.add('overflow-hidden', 'fixed', 'inset-0');
+              }
+
+              document.addEventListener('click', function(event) {
+                if (event.target.closest('.mc-closeModal') || event.target.dataset.action === 'close-mc-modal') {
+                  enableScroll();
                 }
+              });
 
-                // Listen for the close event on the Mailchimp popup
-                document.addEventListener('click', function(event) {
-                  if (event.target.closest('.mc-closeModal') || event.target.dataset.action === 'close-mc-modal') {
+              const observer = new MutationObserver(function() {
+                const modal = document.querySelector('.mc-modal');
+                if (!modal || modal.style.display === 'none') {
+                  enableScroll();
+                } else {
+                  disableScroll();
+                }
+              });
+
+              observer.observe(document.body, { attributes: true, childList: true, subtree: true });
+
+              window.addEventListener('load', function() {
+                setTimeout(function() {
+                  const modal = document.querySelector('.mc-modal');
+                  if (!modal || modal.style.display === 'none') {
                     enableScroll();
+                  } else {
+                    disableScroll();
                   }
-                });
-
-                // Ensure scroll is enabled if the popup is closed by other means
-                window.addEventListener('load', function() {
-                  setTimeout(function() {
-                    var modal = document.querySelector('.mc-modal');
-                    if (!modal || modal.style.display === 'none') {
-                      enableScroll();
-                    }
-                  }, 1000);
-                });
-              `
+                }, 1000);
+              });
+            `
             }}
           />
         </Head>
