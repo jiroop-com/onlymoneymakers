@@ -35,6 +35,7 @@ class MyDocument extends Document {
           <meta name='verify-admitad' content='46e072558c' />
 
           {/* External Scripts */}
+
           <script
             async
             src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8437419081527400'
@@ -44,7 +45,6 @@ class MyDocument extends Document {
             async
             src='https://fundingchoicesmessages.google.com/i/pub-8437419081527400?ers=1'
             nonce='N5LV6_wS_cDM1awWc4pNhA'></script>
-          <script src='https://lmsqueezy.com/affiliate.js' defer></script>
           <script src='https://cookiechimp.com/widget/gZvtpV.js'></script>
 
           {/* Inline Scripts */}

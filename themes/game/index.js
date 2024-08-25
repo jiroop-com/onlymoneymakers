@@ -29,7 +29,6 @@ import SideBarContent from './components/SideBarContent'
 import SideBarDrawer from './components/SideBarDrawer'
 import CONFIG from './config'
 import { Style } from './style'
-import DiscordWidget from '@/components/DiscordWidget'
 import { RandomGameList } from './components/RandomGameList'
 // const AlgoliaSearchModal = dynamic(() => import('@/components/AlgoliaSearchModal'), { ssr: false })
 
@@ -95,7 +94,7 @@ const LayoutBase = props => {
                 <Header siteInfo={siteInfo} />
                 {/* 菜单栏 */}
                 <MenuList {...props} />
-                <DiscordWidget collapsed={true} />
+                <AdSlot type='native' />
               </div>
 
               {/* 左侧广告栏目 */}

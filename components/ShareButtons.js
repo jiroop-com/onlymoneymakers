@@ -155,6 +155,7 @@ const ShareButtons = ({ post }) => {
             </TwitterShareButton>
           )
         }
+
         if (singleService === 'telegram') {
           return (
             <TelegramShareButton
