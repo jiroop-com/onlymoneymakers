@@ -101,7 +101,7 @@ const NotionPage = ({ post, className }) => {
           Tweet
         }}
       />
-
+      <CustomCheckbox />
       <AdEmbed />
       <PrismMac />
     </div>
@@ -240,6 +240,12 @@ const TweetEmbed = dynamic(() => import('react-tweet-embed'), {
 const AdEmbed = dynamic(
   () => import('@/components/GoogleAdsense').then(m => m.AdEmbed),
   { ssr: true }
+)
+
+// Dynamically import the CustomCheckbox component
+const CustomCheckbox = dynamic(
+  () => import('@/components/CustomCheckbox').then(m => m.default),
+  { ssr: true } // Set to true or false based on whether you need SSR
 )
 
 const Collection = dynamic(
