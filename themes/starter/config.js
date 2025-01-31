@@ -21,7 +21,8 @@ const CONFIG = {
     'https://discord.com/servers/onlymoneymakers-community', // 英雄区按钮
   STARTER_HERO_BUTTON_2_ICON: null, // 英雄区按钮2的图标，不需要则留空
 
-  STARTER_HERO_PREVIEW_IMAGE: 'https://www.youtube.com/watch?v=xxx', // 产品预览图 ，默认读取public目录下图片
+  STARTER_HERO_PREVIEW_IMAGE:
+    'https://www.youtube.com/watch?v=bK67jubsjQc&ab_channel=OnlyMoneyMakers', // 产品预览图 ，默认读取public目录下图片
   STARTER_REVENUE_SLIDER_ENABLE: true,
 
   // 顶部右侧导航暗流
